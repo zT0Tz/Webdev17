@@ -3,7 +3,11 @@
 
   <h2>Join now</h2>
 
-  <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+  <span class="error" *ngIf="error">{{ error }}</span>
+  <!--<div class="alert alert-dismissible alert-danger" *ngIf="error">-->
+  <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+  <!--<strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.-->
+  <!--</div>-->
     
   <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
 
@@ -11,5 +15,6 @@
     <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
 
     <button type="submit" [disabled]="!formData.valid" class="basic-btn">Create my account</button>
+    
   </form>
 </div>

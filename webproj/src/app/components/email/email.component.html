@@ -1,8 +1,14 @@
-<div class="form-container">
-    <a routerLink="/login" id="goback">Go back</a>
-    <h2>Custom Login</h2>
+<div class="jumbotron text-center">
+    <div class="row">
+        <a routerLink="/login" id="goback">Go Back</a>
+    </div>
+    <h2>Login with your email account</h2>
 
-    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+    <!--<span class="error" *ngIf="error">{{ error }}</span>-->
+    <div class="alert alert-dismissible alert-danger" *ngIf="error">
+    <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+    <strong>Error: </strong>There is no user record corresponding to this identifier. The user may have been deleted.
+    </div>
 
     <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
 
@@ -11,5 +17,7 @@
 
       <button type="submit" [disabled]="!formData.valid" class="basic-btn">Log in</button>
       <a routerLink="/signup" class="alc">Don't have an account?</a>
+      <a routerLink="/resetpw" class="alc">Forget Password?</a>
+      <!--<button type="submit" [disabled]="!formData.valid" class="basic-btn">Forget Password?</button>-->
   </form>
 </div>

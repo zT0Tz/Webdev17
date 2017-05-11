@@ -48,10 +48,13 @@ export class FirebaseService {
 
 interface Listing{
   $key?:string;
-  title?:string;
-  type?:string;
+  platform?:string;
+  ID?:string;
   image?:string;
-  city?:string;
-  owner?:string;
-  bedrooms?:string;
+  age?:string;
+  playtime?:string;
+  voice?:string;
+  game?:string;
+  style?:string;
+  character?:string;
 }

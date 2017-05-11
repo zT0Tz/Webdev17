@@ -1,1 +1,25 @@
-<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polyline fill="none" points="   649,137.999 675,137.999 675,155.999 661,155.999  " stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><polyline fill="none" points="   653,155.999 649,155.999 649,141.999  " stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><polyline fill="none" points="   661,156 653,162 653,156  " stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/></g><g><path d="M27,14h-3v-2.667c0-4.411-3.589-8-8-8s-8,3.589-8,8V14H5c-0.552,0-1,0.448-1,1s0.448,1,1,1h21v12H6v-9c0-0.553-0.448-1-1-1   s-1,0.447-1,1v10c0,0.553,0.448,1,1,1h22c0.553,0,1-0.447,1-1V15C28,14.448,27.553,14,27,14z M10,11.333c0-3.309,2.691-6,6-6   s6,2.691,6,6V14H10V11.333z"/><path d="M20,22c0-2.206-1.794-4-4-4c-2.206,0-4,1.794-4,4s1.794,4,4,4C18.206,26,20,24.206,20,22z M14,22c0-1.103,0.897-2,2-2   c1.103,0,2,0.897,2,2s-0.897,2-2,2C14.897,24,14,23.103,14,22z"/></g></svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2335 5105 c-115 -22 -195 -45 -285 -82 -438 -179 -748 -578 -815
+-1048 -11 -72 -15 -204 -15 -476 l0 -375 -73 -12 c-162 -28 -292 -139 -350
+-299 -22 -58 -22 -63 -25 -1198 -2 -763 0 -1166 8 -1220 24 -184 143 -328 317
+-380 72 -22 2854 -22 2926 0 174 52 293 196 317 380 8 54 10 457 8 1220 -3
+1135 -3 1140 -25 1198 -58 160 -188 271 -350 299 l-73 12 0 375 c0 272 -4 404
+-15 476 -79 556 -489 996 -1045 1120 -101 23 -408 29 -505 10z m440 -464 c102
+-26 262 -106 342 -171 114 -91 212 -228 268 -371 52 -132 57 -177 62 -591 l5
+-388 -892 0 -892 0 5 388 c4 303 8 402 21 456 82 359 346 615 712 691 93 19
+265 13 369 -14z m1115 -3081 l0 -1110 -1330 0 -1330 0 0 1110 0 1110 1330 0
+1330 0 0 -1110z"/>
+<path d="M2460 2219 c-105 -21 -215 -100 -281 -202 -49 -76 -74 -182 -66 -281
+9 -100 66 -215 143 -285 30 -28 59 -51 64 -51 4 0 10 -78 12 -172 4 -188 12
+-219 64 -272 111 -111 310 -76 372 64 12 26 17 80 20 208 2 94 8 172 12 172 5
+0 34 23 64 51 77 70 134 185 143 285 26 308 -240 543 -547 483z"/>
+</g>
+</svg>

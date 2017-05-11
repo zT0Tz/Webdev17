@@ -23,8 +23,9 @@ export class SignupComponent implements OnInit {
         email: formData.value.email,
         password: formData.value.password
       }).then(
-        (success) => {
-        this.router.navigate(['/members'])
+        authState => {
+          authState.auth.sendEmailVerification();
+        this.router.navigate(['/block'])
       }).catch(
         (err) => {
         this.error = err;

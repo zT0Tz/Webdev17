@@ -1,0 +1,58 @@
+<!--<div class="jumbotron text-center">	-->
+	<div class="offset-md-3 col-6">
+		<div style="color:#B40404">
+    		<h2><font size="6">Post a LFG Request</font></h2>
+		</div>
+		<fieldset>	
+			<form action="">
+				<div class="form-group">
+					<label>Your Player ID</label>
+					<input class="form-control" type="text" [(ngModel)]="ID" name="ID" required> <br>
+  				</div>
+				
+				<div class="form-group">
+				    <label>Select game</label>
+				    <select class="form-control" type="text" [(ngModel)]="game" name="game" required>
+				      <!--<option value="games available">games available</option>-->
+				      <option value="StarCraft 2">StarCraft2</option>
+				      <option value="God of War">God of War</option>
+				      <option value="Monster Hunter">Monster Hunter</option>
+				      <option value="Diablo 3">Diablo 3</option>
+				    </select>
+			    </div>
+			    
+  				<div class="form-group">
+				    <label class="col-lg-2 control-label">Team Type</label>
+				    <div class="col-lg-10">
+				      <div class="radio">
+				        <label>
+				          <input type="radio" [(ngModel)]="type" name="type" value="match" checked="">
+				          match
+				        </label>
+				      </div>
+				      <div class="radio">
+				        <label>
+				          <input type="radio" [(ngModel)]="type" name="type" value="event">
+				          event
+				        </label>
+				      </div>
+				    </div>
+				  </div>
+				  
+				<div class="form-group">
+				    <label>Start time</label>
+				    <input class="form-control" type="text" [(ngModel)]="start" name="start" required>
+				</div>
+				
+				<div class="form-group">
+				    <label>Duration</label>
+				    <input class="form-control" type="number" [(ngModel)]="duration" name="start" required>
+				</div>
+				
+				<!--<input type="text" name="content" class="form-control" [(ngModel)]="content"><br>-->
+				<input routerLink='/getLFG' type="submit" class="btn btn-success" (click) = "getFormData()">
+				<!--<a routerLink='/getLFG' class="btn btn-primary">Submit</a>-->
+			</form>
+		</fieldset>	
+	</div>
+<!--</div>-->

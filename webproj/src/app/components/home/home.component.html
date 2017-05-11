@@ -1,7 +1,37 @@
 <div class="jumbotron text-center">
-  <div class="container">
-    <h1>Property Listings</h1>
-    <p>Access the hottest properties available</p>
-    <a (click)="login()"><img src="assets/img/google.png"></a>
+  <div class="container" img src="assets/img/starcraft2.1.jpg">
+    <h1>zT0Tz Gaming</h1>
+    <p>Maybe the best Gaming Players' Platform</p>
+    <!--<a (click)="login()"><img src="assets/img/google.png"></a>-->
+    
+    <p><img src="assets/img/starcraft2.1.jpg"></p>
+    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
   </div>
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <app-advertise></app-advertise>
+    <br>
+    <br>
+  </div>    
+    
+  <div class="offset-md-3 col-6">
+    <br>
+    <br>
+
+    <h2>LFG Requests</h2>
+    <a *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div>
+     <ul class="list-group">
+       <li class="list-group-item">Player's ID: {{item.ID}}</li>
+       <li class="list-group-item">Game: {{item.game}}</li>
+       <li class="list-group-item">Type of team: {{item.type}}</li>
+       <!--<li class="list-group-item">Match or Event: {{item.choose}}</li>-->
+       <li class="list-group-item">Start time: {{item.start}}</li>
+       <li class="list-group-item">Duration: {{item.duration}}</li>
+     </ul>
+
 </div>

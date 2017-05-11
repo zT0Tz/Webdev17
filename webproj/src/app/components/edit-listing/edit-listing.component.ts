@@ -9,13 +9,15 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
 })
 export class EditListingComponent implements OnInit {
   id;
-  title;
-  owner;
-  city;
-  bedrooms;
-  price;
+  platform;
+  ID;
   image;
-  type;
+  age;
+  playtime;
+  voice;
+  game;
+  style;
+  character;
 
   constructor(
     private firebaseService:FirebaseService,
@@ -27,23 +29,27 @@ export class EditListingComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
 
     this.firebaseService.getListingDetails(this.id).subscribe(listing => {
-      this.title = listing.title;
-      this.owner = listing.owner;
-      this.city = listing.city;
-      this.bedrooms = listing.bedrooms;
-      this.price = listing.price;
-      this.type = listing.type;
+      this.platform = listing.platform;
+      this.ID = listing.ID;
+      this.age = listing.age;
+      this.playtime = listing.playtime;
+      this.voice = listing.voice;
+      this.game = listing.game;
+      this.style = listing.style;
+      this.character = listing.character;
     });
   }
 
   onEditSubmit(){
     let listing = {
-        title: this.title,
-        owner: this.owner,
-        city: this.city,
-        bedrooms: this.bedrooms,
-        price: this.price,
-        type: this.type
+        platform:this.platform,
+        ID:this.ID,
+        age:this.age,
+        playtime:this.playtime,
+        voice:this.voice,
+        game:this.game,
+        style:this.style,
+        character:this.character
     }
 
     this.firebaseService.updateListing(this.id, listing);

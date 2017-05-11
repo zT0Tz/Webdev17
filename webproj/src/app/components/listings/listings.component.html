@@ -1,5 +1,13 @@
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let listing of listings">
-    <a [routerLink]="['/listing/'+listing.$key]">{{listing.title}}</a>
-  </li>
-</ul>
+<div class="jumbotron text-center">
+  <div class="offset-md-3 col-6">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let listing of listings">
+        <a [routerLink]="['/listing/'+listing.$key]">{{listing.ID}} [{{listing.game}}]</a>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <p><a [routerLink]="['/add-listing']" class="btn btn-primary btn-lg">Create a Profile</a></p>
+  </div>
+</div>

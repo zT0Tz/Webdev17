@@ -1,37 +1,90 @@
-<a [routerLink]="['/listings']">Back</a>
-<br />
-<h2 class="page-header">Add Listing</h2>
-<form (submit)="onAddSubmit()">
-  <div class="form-group">
-    <label>Title</label>
-    <input class="form-control" type="text" [(ngModel)]="title" name="title" required>
-  </div>
-  <div class="form-group">
-    <label>City</label>
-    <input class="form-control" type="text" [(ngModel)]="city" name="city" required>
-  </div>
-  <div class="form-group">
-    <label>Owner</label>
-    <input class="form-control" type="text" [(ngModel)]="owner" name="owner" required>
-  </div>
-  <div class="form-group">
-    <label>Bedrooms</label>
-    <input class="form-control" type="number" [(ngModel)]="bedrooms" name="bedrooms" required>
-  </div>
-  <div class="form-group">
-    <label>Type</label>
-    <select class="form-control" type="text" [(ngModel)]="type" name="type" required>
-      <option value="Estate">Estate</option>
-      <option value="Condo">Condo</option>
-      <option value="Apartment">Apartment</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <input id="image" name="image" [(ngModel)]="image" type="file" >
-  </div>
-  <div class="form-group">
-    <label>Price</label>
-    <input class="form-control" type="text" [(ngModel)]="price" name="price" required>
-  </div>
-  <input type="submit" value="submit" class="btn btn-success">
+<form class="form-horizontal">
+  <fieldset>
+    <div style="color:#FFFFFF">
+      <a [routerLink]="['/listings']">Back</a>
+    </div>
+    <br />
+    <div style="color:#B40404">
+    		<h2><font size="6">Creat Your Profile</font></h2>
+		</div>
+    <form (submit)="onAddSubmit()">
+      <div class="form-group">
+        <label class="control-label" for="focusedInput">Focused input</label>
+        <select class="form-control" type="text" [(ngModel)]="platform" name="platform" required>
+          <option value="platforms available">platforms available</option>
+          <option value="PC">PC</option>
+          <option value="PS3">PS3</option>
+          <option value="PS4">PS4</option>
+          <option value="XBox">Xbox</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Player ID</label>
+        <input class="form-control" type="text" [(ngModel)]="ID" name="ID" required>
+      </div>
+      <div class="form-group">
+        <label>Upload your photo</label>
+        <input id="image" name="image" [(ngModel)]="image" type="file" >
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input class="form-control" type="number" id="age" [(ngModel)]="age" name="age" required>
+        <script type="text/javascript">
+          var text = document.getElementById("age");
+          text.onkeyup = function(){
+            this.value=this.value.replace(/\D/g,'');
+            if(text.value>110){
+                text.value = 110;
+            }
+          }
+        </script>
+      </div>
+      <div class="form-group">
+        <label>Rugular playtimes</label>
+        <input class="form-control" type="text" [(ngModel)]="playtime" name="playtime" required>
+      </div>
+      <!--<div class="form-group">-->
+      <!--  <label>Ability to Voice Channel</label>-->
+      <!--  <input class="form-control" type="text" [(ngModel)]="voice" name="voice" required>-->
+      <!--</div>-->
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Ability to Voice Channel</label>
+        <div class="col-lg-10">
+          <div class="radio">
+            <label>
+              <input type="radio" [(ngModel)]="voice" name="voice" value="yes" checked="">
+              Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" [(ngModel)]="voice" name="voice" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Select games</label>
+        <select class="form-control" type="text" [(ngModel)]="game" name="game" required>
+          <option value="games available">gamess available</option>
+          <option value="StarCraft 2">StarCraft2</option>
+          <option value="God of War">God of War</option>
+          <option value="Monster Hunter">Monster Hunter</option>
+          <option value="Diablo 3">Diablo 3</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Play Style</label>
+        <input class="form-control" type="text" [(ngModel)]="style" name="style" required>
+      </div>
+    
+      <div class="form-group">
+        <label>Character</label>
+        <input class="form-control" type="text" [(ngModel)]="character" name="character" required>
+      </div>
+      <input type="submit" value="submit" class="btn btn-success">
+    </form>
+  </fieldset>
 </form>

@@ -1,0 +1,28 @@
+<div class="offset-md-3 col-6">
+<!--<div class="list-group">-->
+ <div style="color:#B40404">
+    		<h2><font size="6">Posted LFG Requests</font></h2>
+	</div>
+ 
+ <a *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+ <!--<div class="d-flex w-100 justify-content-between">-->
+ <!--<small class="text-muted">Player's ID</small>-->
+ <!--<h5 class="mb-1">{{item.ID}}</h5>-->
+ <!--</div>-->
+ <!--<p class="mb-1">{{item.game}}</p>-->
+ <!--<small class="text-muted">{{item.game}.</small>-->
+
+ 
+  <div>
+   <ul class="list-group">
+     <li class="list-group-item">Player's ID: {{item.ID}}</li>
+     <li class="list-group-item">Game: {{item.game}}</li>
+     <li class="list-group-item">Type of team: {{item.type}}</li>
+     <!--<li class="list-group-item">Match or Event: {{item.choose}}</li>-->
+     <li class="list-group-item">Start time: {{item.start}}</li>
+     <li class="list-group-item">Duration: {{item.duration}}</li>
+   </ul>
+  </div>
+ </a>
+ <a routerLink='/sendData' class="btn btn-primary">Back</a>
+</div>

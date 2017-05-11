@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {RouterModule, Routes} from '@angular/router';
 import { AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
-import {FirebaseService} from './services/firebase.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
+import {RouterModule, Routes} from '@angular/router';
 // import { routes } from './app.routes';
+
+import {FirebaseService} from './services/firebase.service';
 import { AuthGuard } from './auth.service';
+import {HttpService} from './services/http.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +22,13 @@ import { LoginComponent } from './components/login/login.component';
 import { EmailComponent } from './components/email/email.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MembersComponent } from './components/members/members.component';
+import { GamesComponent } from './components/games/games.component';
+import { PostComponent } from './components/post/post.component';
+import { GetlfgComponent } from './components/getlfg/getlfg.component';
+import { AdvertiseComponent } from './components/advertise/advertise.component';
+import { BlockComponent } from './components/block/block.component';
+import { ResetpwComponent } from './components/resetpw/resetpw.component';
+import { ResetpgComponent } from './components/resetpg/resetpg.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyA0iVG0GCYfsxUB4bN1g_dsWnCocpxITZY',
@@ -35,11 +44,18 @@ const appRoutes: Routes = [
   {path:'listing/:id', component:ListingComponent},
   {path: 'add-listing', component:AddListingComponent},
   {path:'edit-listing/:id', component:EditListingComponent},
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  {path:'games', component:GamesComponent},
+  { path:'getLFG', component:GetlfgComponent},
+  {path:'postLFG', component:PostComponent},
+  { path: '', redirectTo: '/postLFG', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },
-  { path: 'members', component: MembersComponent, canActivate: [AuthGuard] }
+  { path: 'block', component: BlockComponent },
+  { path: 'members', component: MembersComponent, canActivate: [AuthGuard] },
+  { path: 'resetpw', component: ResetpwComponent },
+  { path: 'resetpg', component: ResetpgComponent }
 ]
 
 const firebaseAuthConfig = {
@@ -61,7 +77,14 @@ const firebaseAuthConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    MembersComponent
+    MembersComponent,
+    GamesComponent,
+    PostComponent,
+    GetlfgComponent,
+    AdvertiseComponent,
+    BlockComponent,
+    ResetpwComponent,
+    ResetpgComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +94,7 @@ const firebaseAuthConfig = {
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [FirebaseService, AuthGuard],
+  providers: [FirebaseService, AuthGuard, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
